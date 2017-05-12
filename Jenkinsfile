@@ -1,4 +1,4 @@
-node('debian-8') {
+node('jenkins-k8s-slave') {
 
   stage 'Checkout'
       sh("Hola scm")
