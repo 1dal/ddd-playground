@@ -19,6 +19,10 @@ podTemplate(label: 'jnlp', containers: [
 
   node('jnlp') {
 
+      stage('Checkout') {
+        checkout scm
+      }
+
       stage('Say hello') {
         echo "hola que ase"
       }
