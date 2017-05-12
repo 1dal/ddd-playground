@@ -1,7 +1,7 @@
 node {
 
   stage 'Checkout'
-      checkout scm
+      sh("Hola scm")
 
   stage 'Build image'
       sh("Hola")
