@@ -1,4 +1,4 @@
-node {
+node("debian8") {
 
 
   checkout scm
