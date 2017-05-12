@@ -1,4 +1,4 @@
-node('debian8') {
+node('debian-8') {
 
   stage 'Checkout'
       sh("Hola scm")
