@@ -24,7 +24,7 @@ podTemplate(label: 'jnlp', containers: [
       }
 
       stage('Say hello') {
-        echo "hola que ase"
+        sh('ls -lha')
       }
   }
 }
