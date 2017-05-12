@@ -22,4 +22,5 @@ podTemplate(label: 'jnlp', containers: [
       stage('Checkout') {
         sh("hola que ase")
       }
+  }
 }
