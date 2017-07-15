@@ -46,14 +46,14 @@ pipeline {
                         sh "sudo docker exec build_fpm_1 ant unit-and-functional"
 
                         // Archive the built artifacts
-                        archive includes: 'report/report'
+                        archive includes: 'report/clover'
 
                         // publish html
                         publishHTML target: [
                             allowMissing: false,
                             alwaysLinkToLastBuild: false,
                             keepAll: true,
-                            reportDir: 'report/report',
+                            reportDir: 'report/clover',
                             reportFiles: 'index.html',
                             reportName: 'Clover Report'
                         ]
