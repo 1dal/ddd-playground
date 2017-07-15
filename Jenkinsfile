@@ -43,7 +43,20 @@ pipeline {
                     },
                     "Unit and functional": {
 
-                       sh "sudo docker exec build_fpm_1 ant unit-and-functional"
+                        sh "sudo docker exec build_fpm_1 ant unit-and-functional"
+
+                        // Archive the built artifacts
+                        archive includes: 'report/report'
+
+                        // publish html
+                        publishHTML target: [
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll: true,
+                            reportDir: 'report/report',
+                            reportFiles: 'index.html',
+                            reportName: 'Clover Report'
+                        ]
                     }
                 )
             }
